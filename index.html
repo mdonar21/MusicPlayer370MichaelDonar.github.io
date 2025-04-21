@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Collaborative Sound App</title>
+
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/tone@14.8.36"
+    ></script>
+    <link rel="stylesheet" href="./style/style.css" />
+    <link rel="icon" href="path/to/your/favicon.ico" />
+  </head>
+  <body>
+    <!-- Main content -->
+    <div id="nameEntry" style="display: block">
+      <h2>Enter Your Name</h2>
+      <input type="text" id="studentName" placeholder="Enter your name" />
+      <button id="submitName">Submit Name</button>
+    </div>
+
+    <!-- Visualizer Container -->
+    <div id="visualizer-container" style="display: none">
+      <!-- Canvas will be dynamically added via JavaScript -->
+    </div>
+
+    <!-- Sound Controls -->
+    <div id="soundControls" style="display: none">
+      <h2>Sound Controls</h2>
+      <div id="timer">Time remaining: 15s</div>
+
+      <!-- Control for pitch and reverb -->
+      <div id="controls">
+        <p>Use</p>
+        <br />
+        <p>A, S, D, F, G, H, J, K</p>
+        <br />
+        <p>Pitch: <span id="pitchValue">1.00</span></p>
+        <div id="pitchFill" class="progress-bar"></div>
+        <p>Reverb: <span id="reverbValue">0.50</span></p>
+        <div id="reverbFill" class="progress-bar"></div>
+      </div>
+    </div>
+
+    <!-- Playback Mode Screen -->
+    <div id="playback" style="display: none">
+      <h2>Playback Mode</h2>
+      <div id="currentStudentName"></div>
+    </div>
+
+    <!-- Message after each student -->
+    <div id="message" style="display: none">
+      <p id="studentMessage"></p>
+      <button id="nextStudentButton" style="display: none">Next Student</button>
+    </div>
+
+    <!-- Links to scripts -->
+    <script type="module" src="./script/main.js"></script>
+  </body>
+</html>
